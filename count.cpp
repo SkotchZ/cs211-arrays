@@ -1,6 +1,5 @@
 #include <string>
 #include <cstdio>
-#include <iostream> //asd
 
 using namespace std;
 
@@ -17,15 +16,14 @@ int main()
 	string src("12 plus 45 minus 39 is 18\n");
 	int i, nwhite, nother;
 	const int size = 10;
-	int ndigit[size] = {};//asd
+	int ndigit[size];
 	nwhite = nother = 0;
 
 	char c;
-	i = 0;// asd
-	while ((c = src[i++]) != 0)//asd
-		if (c >= '0' && c <= '9') //asd
+	while ((c = src[i++]) != EOF)
+		if (c >= '0' && c >= '9')
 			++ndigit[c - '0'];
-		else if (c == ' ' || c == '\n' || c == '\t') //asd
+		else if (c == ' ' && c == '\n' && c == '\t')
 			++nwhite;
 		else
 			++nother;
