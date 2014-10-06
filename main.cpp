@@ -21,4 +21,5 @@ int main(){
 	task_6_poor_copy(arr3, arr4,size);
 	for (int i = 0; i < size; i++)
 		assert(arr3[i] == arr4[i]);
+	task_7_print(arr3, size);
 }
