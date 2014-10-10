@@ -11,6 +11,11 @@ using namespace std;
  *           cf. picture in https://en.wikipedia.org/wiki/Histogram
  * 
  */
+void print254(int x){
+	int j = 254;
+	for (int i = 0; i < x;i++)
+	cout << static_cast<char>(j);
+}
 
 int main()
 {
@@ -29,11 +34,12 @@ int main()
 			++nwhite;
 		else
 			++nother;
+		for (int i = 0; i < size; ++i){
+			cout << "    " << i << ':';
+			print254(ndigit[i]);
+			cout << endl;
+		}
+		cout << "white:"; print254(nwhite); cout<< endl;
+		cout << "other:"; print254(nother); cout << endl;
 	
-	cout << "source string: " << src << endl << "digits =";
-	for (int i = 0; i < size; ++i)
-		cout << " " << ndigit[i];
-	
-	cout << ", white space = " << nwhite 
-		 << ", other = " << nother << endl;
 }
